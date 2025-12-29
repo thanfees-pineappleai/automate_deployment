@@ -4,15 +4,39 @@ import subprocess
 import os
 import sys
 from flask import Flask, request, jsonify
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
 # ==========================================
-# CONFIGURATION ZONE
+# 1. SECURE CONFIGURATION (THE FIX)
 # ==========================================
 
-#GLOBAL_SECRET_TOKEN = "my_super_secure_random_token_123"
+# Get the absolute path to the folder where THIS script lives
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Build the path to the .env file explicitly
+dotenv_path = os.path.join(BASE_DIR, '.env')
+
+# Load the environment variables
+load_dotenv(dotenv_path)
+
+# Fetch the Secret Token
 GLOBAL_SECRET_TOKEN = os.getenv("GITHUB_SECRET")
+
+# Debugging / Safety Check
+print(f"📂 Loading configuration from: {dotenv_path}")
+if not GLOBAL_SECRET_TOKEN:
+    print("❌ CRITICAL ERROR: GITHUB_SECRET is missing or empty.")
+    print("   Please check your .env file.")
+    sys.exit(1) # Stop the server if no token exists
+else:
+    # Print first 5 chars only for safety
+    print(f"✅ Security Token Loaded: {GLOBAL_SECRET_TOKEN[:5]}...")
+
+# ==========================================
+# 2. PROJECT MAPPING
+# ==========================================
 
 # NEW CONFIG STRUCTURE:
 # Key = The endpoint name in the URL (e.g., /webhook/ecommerce)
