@@ -11,7 +11,8 @@ app = Flask(__name__)
 # CONFIGURATION ZONE
 # ==========================================
 
-GLOBAL_SECRET_TOKEN = "my_super_secure_random_token_123"
+#GLOBAL_SECRET_TOKEN = "my_super_secure_random_token_123"
+GLOBAL_SECRET_TOKEN = os.getenv("GITHUB_SECRET")
 
 # NEW CONFIG STRUCTURE:
 # Key = The endpoint name in the URL (e.g., /webhook/ecommerce)
