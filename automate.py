@@ -28,8 +28,8 @@ PROJECT_CONFIG = {
         "staging": "/home/ubuntu/scripts/admin_staging.sh"
     },
     # Simple project with only one branch? Just list that one.
-    "blog": {
-        "main": "/home/ubuntu/scripts/blog_deploy.sh"
+    "test": {
+        "main": "/root/automate_scripts/test.sh"
     }
 }
 
