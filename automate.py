@@ -107,4 +107,4 @@ def webhook_listener(project_key):
         return jsonify({"msg": "Deployment failed", "error": e.stderr}), 500
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000)
+    app.run(host='127.0.0.1', port=7070)
