@@ -57,6 +57,9 @@ PROJECT_CONFIG = {
     },
     "pai_web_live": {
         "Live": "/root/automate_scripts/pai-web-live.sh"
+    },
+    "auto_deploy_script": {
+        "main": "/root/automate_scripts/auto-deploy-script.sh"
     }
 }
 
