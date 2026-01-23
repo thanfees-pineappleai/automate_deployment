@@ -65,8 +65,9 @@ PROJECT_CONFIG = {
         "main": "/root/automate_scripts/auto-deploy-script.sh"
     },
     "PAI_SMS": {
-        "qa": "/root/automate_scripts/pai-sms-qa.sh",
-        "Dev": "/root/automate_scripts/pai-sms-dev.sh"
+        "qa": "/root/automate_scripts/sms-qa.sh",
+        "Beta": "/root/automate_scripts/sms-beta.sh",
+        "Dev": "/root/automate_scripts/sms-dev.sh"
     }
 }
 
@@ -145,3 +146,5 @@ def webhook_listener(project_key):
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=7070)
+
+#https://auto.pineappleai.cloud/webhook/test
