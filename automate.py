@@ -63,6 +63,10 @@ PROJECT_CONFIG = {
     },
     "auto_deploy_script": {
         "main": "/root/automate_scripts/auto-deploy-script.sh"
+    },
+    "PAI_SMS": {
+        "qa": "/root/automate_scripts/pai-sms-qa.sh",
+        "Dev": "/root/automate_scripts/pai-sms-dev.sh"
     }
 }
 
