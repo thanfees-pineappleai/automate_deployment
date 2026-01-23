@@ -54,6 +54,9 @@ PROJECT_CONFIG = {
     # Simple project with only one branch? Just list that one.
     "test": {
         "main": "/root/automate_scripts/test.sh"
+    },
+    "pai_web_live": {
+        "live": "/root/automate_scripts/pai-web-live.sh"
     }
 }
 
