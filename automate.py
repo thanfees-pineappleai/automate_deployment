@@ -148,3 +148,4 @@ if __name__ == '__main__':
     app.run(host='127.0.0.1', port=7070)
 
 #https://auto.pineappleai.cloud/webhook/test
+#pm2 start "gunicorn -w 4 -b 0.0.0.0:7070 --timeout 600 automate:app" --name auto-deploy-bot
