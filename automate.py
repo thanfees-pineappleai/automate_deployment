@@ -57,7 +57,7 @@ PROJECT_CONFIG = {
     },
     "PAI_WEB": {
         "Live": "/root/automate_scripts/pai-web-live.sh",
-        "Dev": "/root/automate_scripts/paiwebdev.sh",
+        "DEV": "/root/automate_scripts/paiwebdev.sh",
         "QA": "/root/automate_scripts/pai-web-qa.sh",
         "Beta": "/root/automate_scripts/pai-web-beta.sh"
     },
